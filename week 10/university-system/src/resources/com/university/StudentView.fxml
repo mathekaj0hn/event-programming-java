@@ -1,0 +1,61 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.university.StudentController"
+      spacing="15"
+      alignment="CENTER"
+      style="-fx-padding: 20;">
+
+    <Label text="STUDENT MANAGEMENT"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+
+        <Label text="Registration Number:"
+               GridPane.rowIndex="0"
+               GridPane.columnIndex="0"/>
+        <TextField fx:id="regNumberField"
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="First Name:"
+               GridPane.rowIndex="1"
+               GridPane.columnIndex="0"/>
+        <TextField fx:id="firstNameField"
+                   GridPane.rowIndex="1"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="Last Name:"
+               GridPane.rowIndex="2"
+               GridPane.columnIndex="0"/>
+        <TextField fx:id="lastNameField"
+                   GridPane.rowIndex="2"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="Email:"
+               GridPane.rowIndex="3"
+               GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="1"/>
+
+    </GridPane>
+
+    <Button text="Save Student"
+            onAction="#handleSaveStudent"/>
+
+    <TableView fx:id="studentTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="regColumn" text="Registration Number" prefWidth="180"/>
+            <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="140"/>
+            <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="140"/>
+        </columns>
+    </TableView>
+
+</VBox>
